@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fox and the Grapes - Bilingual Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="story-container">
+        <h1 id="story-title">The Fox and the Grapes / 狐狸和葡萄</h1>
+        
+        <div id="main-story-content">
+            <!-- Main story scene, controls, moral -->
+            <div class="scene">
+                <img id="scene-image" src="" alt="Story Scene">
+                <div class="text-area">
+                    <div id="english-text" class="story-text active-text">
+                        <p id="english-paragraph"></p>
+                        <audio id="english-audio" src=""></audio>
+                        <button class="play-pause-button" data-lang="english">Play English / 播放英文</button>
+                    </div>
+                    <div id="chinese-text" class="story-text">
+                        <p id="chinese-paragraph"></p>
+                        <audio id="chinese-audio" src=""></audio>
+                        <button class="play-pause-button" data-lang="chinese">Play Chinese / 播放中文</button>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev-scene">Previous Scene / 上一个场景</button>
+                <button id="next-scene">Next Scene / 下一个场景</button>
+                <button id="toggle-language">Switch to Chinese / 切换到中文</button>
+            </div>
+            <div class="moral-section">
+                <h2>Moral of the Story / 故事寓意</h2>
+                <div id="english-moral-container">
+                    <p id="english-moral"></p>
+                    <audio id="english-moral-audio" src="audio/moral_en.mp3"></audio>
+                    <button class="play-pause-button" data-lang="english-moral">Play Moral (EN) / 播放寓意(英)</button>
+                </div>
+                <div id="chinese-moral-container">
+                    <p id="chinese-moral"></p>
+                    <audio id="chinese-moral-audio" src="audio/moral_zh.mp3"></audio>
+                    <button class="play-pause-button" data-lang="chinese-moral">Play Moral (CN) / 播放寓意(中)</button>
+                </div>
+            </div>
+            <button id="open-sour-grapes-moment" class="interactive-button">Let's think about "Sour Grapes"! / 一起来想想“酸葡萄”吧！</button>
+        </div>
+
+        <div id="sour-grapes-moment-page" class="interactive-page" style="display: none;">
+            <h2 id="sour-grapes-title-en">Fox's "Sour Grapes" Moment!</h2>
+            <h2 id="sour-grapes-title-zh" style="display: none;">狐狸的“酸葡萄”时刻！</h2>
+            
+            <div id="sour-grapes-explanation-en">
+                <p id="sg-explanation-en-p1">Sometimes, when we can't get something we really want, we pretend we didn't want it anyway, or say it wasn't good. That's a "Sour Grapes" moment, just like the fox!</p>
+                <audio id="sg-explanation1-en-audio" src="audio/sg_explanation1_en.mp3"></audio>
+                <button class="play-pause-button sg-audio-button" data-lang="sg-explanation1-en">Play Explanation 1 (EN)</button>
+                
+                <p id="sg-explanation-en-p2">Have you ever had a "Sour Grapes" moment? Click on the examples you've experienced:</p>
+                <audio id="sg-explanation2-en-audio" src="audio/sg_explanation2_en.mp3"></audio>
+                <button class="play-pause-button sg-audio-button" data-lang="sg-explanation2-en">Play Explanation 2 (EN)</button>
+            </div>
+            <div id="sour-grapes-explanation-zh" style="display: none;">
+                <p id="sg-explanation-zh-p1">有时候，当我们得不到自己非常想要的东西时，我们会假装自己一点也不想要它，或者说它一点也不好。这就像狐狸一样，是一个“酸葡萄”时刻！</p>
+                <audio id="sg-explanation1-zh-audio" src="audio/sg_explanation1_zh.mp3"></audio>
+                <button class="play-pause-button sg-audio-button" data-lang="sg-explanation1-zh">播放解释 1 (中)</button>
+                
+                <p id="sg-explanation-zh-p2">你有过这样的“酸葡萄”时刻吗？点击你经历过的例子：</p>
+                <audio id="sg-explanation2-zh-audio" src="audio/sg_explanation2_zh.mp3"></audio>
+                <button class="play-pause-button sg-audio-button" data-lang="sg-explanation2-zh">播放解释 2 (中)</button>
+            </div>
+
+            <ul id="sour-grapes-examples" class="examples-list">
+                <!-- Examples will be populated by JavaScript -->
+            </ul>
+            <button id="close-sour-grapes-moment" class="interactive-button">Back to Story / 返回故事</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
